@@ -1,0 +1,113 @@
+@import url("./css/globals.css");
+
+.main-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-contacto h1{
+    font-size: 1.7rem;
+    padding: 20px 0;
+}
+
+.main-contacto p{
+    padding: 20px 10px;
+    max-width: 700px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    gap: 20px;
+    padding: 20px;
+}
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    border: 1px solid var(--color-secundario-oscuro-2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.titulo-grupos-form{
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.grupo-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grupo-form-tipo-producto, .grupo-form-cantidad-producto{
+    flex-direction: row;
+}
+
+select, option{
+    width: 75px;
+    text-align: center;
+    font-size: 1.07rem;
+}
+
+.informacion-personal-input{
+    padding: 5px;
+}
+
+input[type="checkbox"]{
+    width: 20px;
+}
+/*----> Requiere que reestructarice HTML para que el id y clase sean elementos hermanos. No lo voy hacer. Es mejor JS pero no sé usarlo ahora 🐱‍👤
+.especificaciones-estatuilla, .especificaciones-poster{
+    display: none;
+}
+
+#estatuilla:checked ~ .especificaciones-estatuilla{
+    display: flex;
+}
+*/
+#mensaje{
+    height: 200px;
+    border-radius: var(--borde-general);
+    padding: 5px;
+}
+
+.boton-submit{
+    cursor: pointer;
+    width: 80%;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px){
+    .main-contacto h1{
+        font-size: 2rem;
+    }
+    .main-contacto p{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .main-contacto h1{
+        font-size: 2.2rem;
+    }
+    .main-contacto p{
+        font-size: 1.13rem;
+    }
+}
+
+
+

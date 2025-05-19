@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Servicios</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="/img/banner-negro.jpg" alt="banner de dark souls">
+        </div>
+        <nav>
+            <div class="contenedor-icono">
+                <a href="#"><img class="icono" src="/img/icono-ena-modo-oscuro.png" alt="icono de Souls Art Production"></a>
+            </div>
+
+            <input type="checkbox" name="activar-menu" id="activar-menu" class="menu-checkbox" aria-label="Abrir menú de navegación"> <!-- el lector de pantalla lee lo del aria-label -->
+            <label for="activar-menu" class="menu-barras" aria-hidden="true"> <!-- aria-hidden="true" evita que un lector de pantalla lea los span -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu-contenido">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/servicio.html">Servicios</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-servicios contenedor-principal">
+
+        <section class="titulo-principal-servicios">
+            <h1>Nuestros Servicios</h1>
+            <p>En Souls Art Production, creamos estatuillas y pósters personalizados inspirados en los universos de Dark Souls, Bloodborne, Sekiro y Elden Ring. Cada pieza es elaborada con materiales de alta calidad, como resina, vinilo o aluminio inoxidable, para capturar la esencia de tus personajes y escenarios favoritos.</p>
+        </section>
+        <section class="card-grupos">
+            <article class="tipo-servicio-1 card">
+                <h2>Estatuillas personalizadas</h2>
+                <img src="/img/elden-ring.jpg" alt="Estatuilla del Crucible Knight de Elden Ring">
+                <p>Creamos estatuillas detalladas de tus personajes favoritos, desde caballeros de Dark Souls hasta cazadores de Bloodborne. Elige el diseño, tamaño (10-30 cm) y acabados. Tiempo de entrega: 2-4 semanas.</p>
+
+                <button type="button" class="boton-nuestros-servicios">
+                    <a href="/pages/contacto.html">Solicitar servicio</a>
+                </button>
+            </article>
+            <article class="tipo-servicio-2 card">
+                <h2>Posters personalizados</h2>
+                <img src="/img/anor-londo.jpg" alt="Poster de Anor Londo de Dark Souls">
+                <p>Diseñamos pósters únicos con escenarios icónicos o personajes de los juegos de FromSoftware. Disponibles en formatos A3 y A2, con impresión en alta calidad. Tiempo de entrega: 1-2 semanas.</p>
+                <button type="button" class="boton-nuestros-servicios">
+                    <a href="/pages/contacto.html">Solicitar servicio</a>
+                </button>
+            </article>
+        </section>
+
+        <a href="/pages/contacto.html">Contáctanos</a>
+    </main>
+    <aside class="contenedor-principal" aria-label="Publicidad">
+        <h3>Ads</h3>
+        <a href="https://www.enasport.com/"><img src="/img/protein.jpg" alt="Publicidad de ENA Sports en suplementanción proteica"></a>
+    </aside>
+    <footer class="contenedor-principal">
+        <p>&copy; 2025 Souls Art Production. Todos los derechos reservados.</p>
+        <nav class="footer-nav" aria-label="Enlaces sociales">
+            <ul>
+                <li><a href="/index.html">Twitter</a></li>
+                <li><a href="/index.html">Instagram</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+@import url("../css/globals.css");
+@import url("../css/index.css");
+@import url("../css/contacto.css");
+@import url("../css/servicios.css");
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{ /*La etiqueta * no afecta pseudoelementos, por eso el ::before y el ::after, por las dudas nada más*/
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*Heredan de html. Permite modificar box-sizing a un elemento padre y sus hijos envés de modificar elemento por elemento individualmente 👍*/
+}
+
+body{
+    background-color: var(--color-fondo-oscuro-1);
+    font-family: Cinzel, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-texto-primario-oscuro);
+    overflow-x: hidden;
+}
+
+main img{
+    width: 100%;
+    max-width: 100%;
+}
+
+main h1, main h2{
+}
+
+main img:active{
+    animation: imagenes-interaccion 2s ease;
+}
+
+@keyframes imagenes-interaccion{
+    0%{
+        transform: translateY(-5px) scale(0.95);
+    }
+    100%{
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.contenedor-principal{
+    width: var(--ancho-general);
+    margin: var(--margen-altura) auto;
+    padding: var(--relleno-general);
+    border-radius: var(--borde-general);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-texto-primario-oscuro);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario-oscuro-1);
+    position: relative;
+    padding: 10px 15px;
+}
+
+nav li{
+    list-style: none;
+}
+
+.contenedor-icono{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #d89e9e;
+}
+
+.icono{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-checkbox{ /*usar una checkbox invisible para abrir el menú en modo vertical gay*/
+    z-index: 2;
+    position: relative;
+    left: 123px;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+
+.menu-barras{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-barras span{
+    margin: 4px auto;
+    width: 35px;
+    height: 3px;
+    background-color: var(--color-secundario-oscuro-2);
+    outline: 2px solid black;
+}
+
+.menu-checkbox:checked ~ .menu-barras span{
+    animation: menu-span 1s ease forwards;
+}
+
+.menu-checkbox:checked ~ .menu-barras span:nth-child(1){
+    animation: menu-span-1 0.3s ease forwards;
+}
+.menu-checkbox:checked ~ .menu-barras span:nth-child(2){
+    animation: menu-span-2 0.3s ease forwards;
+}
+.menu-checkbox:checked ~ .menu-barras span:nth-child(3){
+    animation: menu-span-3 0.3s ease forwards;
+}
+
+@keyframes menu-span{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes menu-span-1{
+    0%{
+
+    }
+    100%{
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+@keyframes menu-span-2{
+    0%{
+
+    }
+    100%{
+        transform: rotate(90deg) translate(-5px, 0px);
+    }
+}
+
+@keyframes menu-span-3{
+    0%{
+
+    }
+    100%{
+        transform: rotate(-45deg) translate(10px, -10px)
+    }
+}
+
+.menu-contenido{
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-secundario-oscuro-1);
+    border-radius: 10px;
+    padding: 25px;
+    gap: 15px;
+    z-index: 10;
+}
+
+#activar-menu:checked ~ .menu-contenido{
+    display: flex;
+    animation: menu-desplegable 0.3s forwards;
+}
+
+@keyframes menu-desplegable{
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.boton-nuestros-servicios{
+    width: 95%;
+    height: 40px;
+    background-color: var(--color-secundario-oscuro-3);
+    border-radius: 10px;
+    align-items: center;
+    align-self: center;
+    border: 1px solid black;
+}
+
+.boton-nuestros-servicios a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.boton-nuestros-servicios:hover{
+    background-color: var(--color-secundario-oscuro-4);
+}
+
+
+aside{
+    border-top: 1px solid var(--color-secundario-oscuro-2);
+    text-align: center;
+}
+
+aside a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+aside img{
+    max-width:  75%;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+footer{
+    border-top: 1px solid var(--color-secundario-oscuro-2);
+    background-color: var(--color-primario-oscuro-1);
+}
+
+.footer-nav{
+    background: transparent;
+}
+
+footer ul{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.proteina{
+    position: relative;
+}
+
+@media screen and (min-width: 768px){
+    aside img{
+        width: 69%;
+    }
+    .boton-nuestros-servicios{
+        width: 300px;
+        height: 50px;
+        align-items: center;
+        align-self: center;
+    }
+
+    @keyframes titulos-animacion{
+    0%{
+        transform: translateY(-5px) scale(0.7);
+    }
+    100%{
+        transform: translateY(0px) scale(1);
+    }
+}
+}
+
+@media screen and (min-width: 1024px){
+    .menu-checkbox, .menu-barras {
+        display: none;
+    }
+    .menu-contenido {
+        display: flex;
+        position: static;
+        background: none;
+        padding: 0;
+        flex-direction: row;
+        gap: 20px;
+    }
+    aside img{
+        width: 30%;
+    }
+    .boton-nuestros-servicios{
+        margin-top: 40px;
+    }
+}

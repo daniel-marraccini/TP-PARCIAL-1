@@ -1,0 +1,17 @@
+:root{
+    --color-fondo-oscuro-1: #121212;
+    --color-primario-oscuro-1: #444444;
+    --color-secundario-oscuro-1: #5c5b33;
+    --color-secundario-oscuro-2: #ececec;
+    --color-secundario-oscuro-3: #d4a017;
+    --color-secundario-oscuro-4: #d47217;
+    --color-texto-primario-oscuro: #f8f8f8;
+
+    --margen-ancho: auto;
+    --margen-altura: 30px;
+    /*--margen-general: var(--margen-altura) var(--margen-ancho);*/
+    /*--ancho-general: calc(100% - var(--margen-ancho));*/
+    --ancho-general: 100%;
+    --borde-general: 5px;
+    --relleno-general: 15px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="/img/banner-negro.jpg" alt="banner de dark souls">
+        </div>
+        <nav>
+            <div class="contenedor-icono">
+                <a href="#"><img class="icono" src="/img/icono-ena-modo-oscuro.png" alt="icono de Souls Art Production"></a>
+            </div>
+
+            <input type="checkbox" name="activar-menu" id="activar-menu" class="menu-checkbox" aria-label="Abrir menú de navegación"> <!-- el lector de pantalla lee lo del aria-label -->
+            <label for="activar-menu" class="menu-barras" aria-hidden="true"> <!-- aria-hidden="true" evita que un lector de pantalla lea los span -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="menu-contenido">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/servicios.html">Servicios</a></li>
+                <li><a href="/pages/Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-contacto contenido-principal">
+        <h1>Formulario de contacto</h1>
+        <p>Necesita llenar el formulario para hacer una comisión. Luego entraremos en contacto con
+            usted para entrar en detalles y confirmar si desea continuar. Puede elegir más
+        de un tipo de producto si lo desea! Solo aceptamos un producto por tipo:</p>
+
+        <form action="" method="POST">
+            <fieldset class="informacion-personal">
+                <legend class="titulo-grupos-form">Información personal</legend>
+
+                <div class="grupo-form">
+                    <label for="nombre">Nombre completo: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="nombre y apellido aquí..." class="informacion-personal-input" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="correo electrónico aquí..." class="informacion-personal-input" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="numero-celular">N° de celular (opcional): </label>
+                    <input type="tel" name="numero-celular" id="numero-celular" placeholder="número de celular aquí..." class="informacion-personal-input">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="titulo-grupos-form">Selección del tipo de producto (puede ser más de uno)</legend>
+
+                <div class="grupo-form grupo-form-tipo-producto">
+                    <label for="estatuilla">Estatuilla: </label>
+                    <input type="checkbox" name="estatuilla" id="estatuilla">
+                </div>
+
+                <div class="grupo-form grupo-form-tipo-producto">
+                    <label for="poster">Poster: </label>
+                    <input type="checkbox" name="poster" id="poster">
+                </div>
+            </fieldset>
+
+            <fieldset class="especificaciones-estatuilla">
+                <legend class="titulo-grupos-form">Especificaciones de estatuilla</legend>
+                <div>
+                    <label for="estatuilla-tipo-material">Seleccione el material: </label>
+                    <select name="estatuilla-tipo-material" id="estatuilla-tipo-material">
+                        <optgroup label="más baratos">
+                            <option value="resina">Resina</option>
+                            <option value="vinilo">Vinilo</option>
+                        </optgroup>
+                        <optgroup label="más caros">
+                            <option value="aluminio inoxidable">Aluminio inoxidable</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="estatuilla-medida">Seleccione el tamaño: </label>
+                    <input type="number" name="estatuilla-medida" id="estatuilla-medida" min="10" max="30" step="0.5" value="10">
+                </div>
+                <div>
+                    <label for="estatuilla-tipo-de-acabado">Seleccione el tipo de acabado: </label>
+                    <select name="estatuilla-tipo-de-acabado" id="estatuilla-tipo-de-acabado">
+                        <option value="minusuoso">Minusuoso</option>
+                        <option value="simple">Simple pero detallado</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="especificaciones-poster">
+                <legend class="titulo-grupos-form">Especificaciones de poster</legend>
+                <div>
+                    <label for="poster-formato">Seleccione el tamaño: </label>
+                    <select name="poster-formato" id="poster-formato">
+                        <optgroup label="más barato">
+                            <option value="a3">A3</option>
+                        </optgroup>
+                        <optgroup label="más caro">
+                            <option value="a2">A2</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="poster-diseno">Seleccione el tipo de diseño: </label>
+                    <select name="poster-diseno" id="poster-diseno">
+                        <optgroup label="más barato">
+                            <option value="minimalista">Minimalista o simbólico</option>
+                            <option value="personaje-iconico">Personaje icónico</option>
+                            <option value="escenario-epico">Escenario épico</option>
+                        </optgroup>
+                        <optgroup label="más caro">
+                            <option value="batalla-dinamica">Batalla o escena dinámica</option>
+                            <option value="collage">Collage o montaje</option>
+                            <option value="retrato-jugador">Retrato de jugador personalizado</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="poster-tipo-de-acabado">Seleccione el tipo de acabado: </label>
+                    <select name="poster-tipo-de-acabado" id="poster-tipo-de-acabado">
+                        <option value="minusuoso">Minusuoso</option>
+                        <option value="simple">Simple pero detallado</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!--
+            <fieldset>
+                <legend class="titulo-grupos-form">Cantidad de productos</legend>
+
+                <div class="grupo-form grupo-form-cantidad-producto">
+                    <label for="figuritas">Seleccione la cantidad de figuritas: </label>
+                    <select name="figuritas" id="cantidad-figuritas">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form grupo-form-cantidad-producto">
+                    <label for="posters">Seleccione la cantidad de posters: </label>
+                    <select name="posters" id="cantidad-posters">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </fieldset>
+            -->
+
+            <fieldset>
+                <legend class="titulo-grupos-form">Mensaje</legend>
+                <div class="grupo-form">
+                    <label for="mensaje">Ingrese un mensaje descriptivo: </label>
+                    <textarea name="mensaje" id="mensaje" placeholder="escriba su mensaje aquí..."></textarea>
+                </div>
+            </fieldset>
+
+            <button class="boton-submit" type="submit">Enviar</button>
+
+        </form>
+    </main>
+    <aside class="contenedor-principal" aria-label="Publicidad">
+        <h3>Ads</h3>
+        <a href="https://www.enasport.com/"><img src="/img/protein.jpg" alt="ENA Sports, suplementanción proteica"></a>
+    </aside>
+    <footer class="contenedor-principal">
+        <p>&copy; 2025 Souls Art Production. Todos los derechos reservados.</p>
+        <nav aria-label="Enlaces sociales">
+            <ul>
+                <li><a href="/index.html">Twitter</a></li>
+                <li><a href="/index.html">Instagram</a></li>
+                <li><a href="/pages/Inicio.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
